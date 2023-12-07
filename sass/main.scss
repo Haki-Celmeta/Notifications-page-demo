@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+@import 'variables';
+@import 'mixin';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background-color: $background-color;
+  @include displayFlex(row);
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0rem;
+}
+
+.notifications-container {
+  width: 70%;
+  background-color: #fff;
+  padding: 2rem 2rem 1rem 2rem;
+  border-radius: 8px
+}
+
+.part-one {
+  @include displayFlex(row);
+  justify-content: space-between;
+  align-items: center;
+
+  div:first-child {
+    @include displayFlex(row);
+    align-items: center;
+    gap: 12px;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    div {
+      background-color: $blue-color;
+      color: #fff;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+  }
+
+  div:last-child {
+    color: $greyish-blue-color;
+    transition: $normal-transition;
+    cursor: pointer;
+  }
+  div:last-child:hover {
+    color: $blue-color;
+  }
+}
+
+.part-two {
+  @include displayFlex(column);
+  gap: 8px;
+  margin-top: 1.8rem;
+
+  .important {
+    color: $dark-grey-color;
+    font-weight: 800;
+    margin-left: 4px;
+    transition: $normal-transition;
+    cursor: pointer;
+  }
+  .important:hover {
+    color: $blue-color
+  }
+
+  .chess-club {
+    color: $blue-color;
+    font-weight: 800;
+    margin-left: 4px;
+    cursor: pointer;
+  }
+
+  .time {
+    color: $dark-grey-color;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: $red-color;
+    border-radius: 50%;
+    margin-left: 8px;
+  }
+}
+
+.comment {
+  @include displayFlex(row);
+  align-items: center;
+  gap: 12px;
+  padding: 0.8rem;
+  border-radius: 8px;
+
+  div {
+    div:first-child {
+      color: $dark-grey-color;
+    }
+  }
+
+  img {
+    width: 40px;
+  }
+
+  .name {
+    font-weight: 800;
+    margin-right: 4px;
+    color: black;
+    transition: $normal-transition;
+    cursor: pointer;
+  }
+  .name:hover {
+    color: $blue-color;
+  }
+}
+
+.comment.kimberly {
+  img:last-child {
+    margin-left: auto;
+  }
+}
+
+.comment.rizky {
+  align-items: flex-start;
+}
+
+.comment.not-open {
+  background-color: $background-color;
+}
+
+#message {
+  padding: 0.5rem 1rem;
+  border: 1px solid $light-blue-color;
+  margin-top: 1rem;
+  color: $dark-grey-color;
+  transition: $normal-transition;
+  cursor: pointer;
+}
+#message:hover {
+  background-color: $light-blue-color;
+}
