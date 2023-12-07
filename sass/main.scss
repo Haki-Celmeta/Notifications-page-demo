@@ -150,3 +150,20 @@ body {
 #message:hover {
   background-color: $light-blue-color;
 }
+
+@media (max-width: 700px) {
+  .notifications-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    padding: 0;
+  }
+
+  .notifications-container {
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
+}
